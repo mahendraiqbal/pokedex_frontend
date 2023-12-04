@@ -73,7 +73,7 @@ function Register() {
             cursor: "pointer",
           }}
         >
-          Register
+          Test
         </button>
       </form>
     </div>
