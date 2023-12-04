@@ -47,32 +47,76 @@ function Login() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        maxWidth: "400px",
+        margin: "auto",
+        marginTop: "50px",
+        padding: "20px",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+      }}
+    >
       <h2>Login</h2>
       <form>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="button" onClick={handleLogin}>
+        <div style={{ marginBottom: "15px" }}>
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
+            />
+          </label>
+        </div>
+        <div style={{ marginBottom: "15px" }}>
+          <label>
+            Password:
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
+            />
+          </label>
+        </div>
+        <button
+          type="button"
+          onClick={handleLogin}
+          style={{
+            width: "100%",
+            padding: "10px",
+            backgroundColor: "#4CAF50",
+            color: "white",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+        >
           Login
         </button>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
       </form>
+
+      {/* Add Register button */}
+      <div style={{ marginTop: "15px" }}>
+        <Link to="/register" style={{ display: "block", textAlign: "center" }}>
+          <button
+            type="button"
+            style={{
+              width: "100%",
+              padding: "10px",
+              backgroundColor: "#008CBA",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer",
+            }}
+          >
+            Register
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }

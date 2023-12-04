@@ -27,28 +27,52 @@ function Register() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        maxWidth: "400px",
+        margin: "auto",
+        marginTop: "50px",
+        padding: "20px",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+      }}
+    >
       <h2>Register</h2>
       <form>
-        <label>
-          Username:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="button" onClick={handleRegister}>
+        <div style={{ marginBottom: "15px" }}>
+          <label>
+            Username:
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
+            />
+          </label>
+        </div>
+        <div style={{ marginBottom: "15px" }}>
+          <label>
+            Password:
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              style={{ width: "100%", padding: "8px", boxSizing: "border-box" }}
+            />
+          </label>
+        </div>
+        <button
+          type="button"
+          onClick={handleRegister}
+          style={{
+            width: "100%",
+            padding: "10px",
+            backgroundColor: "#008CBA",
+            color: "white",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+        >
           Register
         </button>
       </form>
